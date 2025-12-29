@@ -31,7 +31,7 @@ class Data(models.Model):
     year= models.FloatField(default=2000) #models.IntegerField()
     doy = models.FloatField(default=1) #models.IntegerField()
     temperature = models.FloatField(default=0)#,blank=False, null=False) 
-    catture = models.FloatField(default=0)#,blank=False, null=False) 
+    catture = models.FloatField(default=0, blank=True, null=True) 
     trappola = models.TextField(default='00')#,blank=False, null=False) 
     wind = models.BooleanField(default=False)
     
@@ -44,3 +44,4 @@ class Nottue(models.Model):
     class Meta:
         ordering = ['created']
         #managed = False
+
