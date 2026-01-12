@@ -320,6 +320,7 @@ def nottue_list(request, format=None):
             
                     # ====== NUOVO ======
                     "had_zero_catches_t0": had_zero_catches,
+                    "final_doy":doy[-1],
                 }
             
                 results.append(df_new)
