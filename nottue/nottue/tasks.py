@@ -109,7 +109,7 @@ def nottue_list(request, format=None):
             
                 # =========================
                 # EPISODI: serie DD per ciascun episodio (per plot)
-                # dd_series lunga n con NaN quando non attivo
+                # dd_series lunga n con 0 quando non attivo
                 # =========================
                 episodes_all = []
                 ep_map = {}
@@ -121,7 +121,7 @@ def nottue_list(request, format=None):
                         "start_year": ep.get("start_year"),
                         "start_doy": ep.get("start_doy"),
                         "dd": float(ep.get("dd", 0.0)),
-                        "dd_series": [np.nan] * n,
+                        "dd_series": [0] * n,
                         "finished": False,
                         "finish_year": None,
                         "finish_doy": None,
@@ -248,7 +248,7 @@ def nottue_list(request, format=None):
                                 "start_year": year[i],
                                 "start_doy": doy[i],
                                 "dd": 0.0,
-                                "dd_series": [np.nan] * n,
+                                "dd_series": [0] * n,
                                 "finished": False,
                                 "finish_year": None,
                                 "finish_doy": None,
